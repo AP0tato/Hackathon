@@ -32,7 +32,8 @@ def study():
     g.p.readiness += 5
     g.p.happiness += 10
     g.p.stress -= 3
-    import day5c1
+
+    import day5c2
 
 def sleep():
     window.destroy()
@@ -41,6 +42,6 @@ def sleep():
     g.p.stress += 7
     g.p.readiness -= 4
     
-    import day5c1
+    import day5c2
 
 window.mainloop()
