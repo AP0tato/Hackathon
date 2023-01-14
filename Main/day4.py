@@ -36,11 +36,15 @@ def go():
     window.destroy()
     g.p.readiness += 5
     g.p.happiness += 5
+    g.p.stress -=1
     import day5c1
 
 def home():
     window.destroy()
+
     g.p.rest+= 4
+    g.p.stress += 7
+    
     import day5c1
 
 window.mainloop()

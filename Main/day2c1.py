@@ -36,6 +36,7 @@ def phys():
 
     g.p.health += 5
     g.p.happiness -= 5
+    g.p.stress -= 2
 
     import day2c2
 
@@ -45,6 +46,7 @@ def hobby():
 
     g.p.health += 5
     g.p.happiness += 5
+    g.p.stress -= 3
 
     import day2c2
 

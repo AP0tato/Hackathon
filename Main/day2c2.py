@@ -36,6 +36,7 @@ def study():
     window.destroy()
 
     g.p.readiness += 5
+    g.p.stress -= 3
     
     import day3c1
 
@@ -45,6 +46,7 @@ def hobby():
 
     g.p.health += 5
     g.p.happiness += 5
+    g.p.stress -= 1
 
     import day3c1
 

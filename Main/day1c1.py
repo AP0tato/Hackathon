@@ -30,6 +30,7 @@ def unhealthy():
 
     g.p.health += 5
     g.p.happiness -= 5
+    g.p.stress += 5
 
     import day1c2
 
@@ -38,6 +39,7 @@ def healthy():
 
     g.p.health += 5
     g.p.happiness -= 5
+    g.p.stress += 5
 
     import day1c2
 

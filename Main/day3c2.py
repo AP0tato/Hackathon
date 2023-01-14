@@ -34,13 +34,19 @@ gym.place(x=460, y=430)
 def walk():
     #adds, but less
     window.destroy()
+
     g.p.health += 2
+    g.p.stress -= 1
+    
     import day4
 
 def gym():
     #adds, but more
     window.destroy()
+
     g.p.health+= 4
+    g.p.stress += 1
+
     import day4
 
 window.mainloop()
