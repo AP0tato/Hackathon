@@ -2,8 +2,11 @@ import keyboard as key
 import tkinter as tk
 import _thread as th
 
-xVelocity = 0.0
-yVelocity = 0.0
+class Player:
+    xVelocity = 0.0
+    yVelocity = 0.0
+    stress = 0  # Max 100
+    health = 80 # Max 100, factors such as eating habits and physical activity
 
 def CheckInput():
     while True:
