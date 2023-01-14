@@ -28,5 +28,20 @@ def CheckInput():
 def Main():
     pass
 
+#blank setup, maybe a start screen?
+window = tk.Tk()
+
+myVar = tk.StringVar(window)
+myVar.set("Select")
+
+window.title("Testing")
+window.geometry("800x500")
+title = window.title()
+
+welcomeLabel = tk.Label(window, text = "Welcome\nThis is the start! ", height = 5, width = 20)
+welcomeLabel.pack()
+
+window.mainloop()
+
 if __name__=="__main__":
     pass
