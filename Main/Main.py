@@ -38,7 +38,7 @@ def Main():
     listener.start()
 
     #blank setup, maybe a start screen?
-    window = tk.Tk()
+window = tk.Tk()
 
 myVar = tk.StringVar(window)
 myVar.set("Select")
