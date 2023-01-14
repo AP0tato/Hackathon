@@ -59,7 +59,7 @@ quitBtn.place(x=550, y=340)
 
 def show_window():
     window.destroy()
-    import gameStart.py
+    import gameStart
 
 def quit_window():
     window.destroy()
