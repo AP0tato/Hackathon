@@ -7,13 +7,18 @@ def show_window(window):
 def run():
     window = tk.Tk()
     window.resizable(False, False)
-    window.geometry('800x500')
+    w = 800 
+    h = 500 
+    ws = window.winfo_screenwidth()
+    hs = window.winfo_screenheight() 
+    x = (ws/2) - (w/2)
+    y = (hs/2) - (h/2)
+    window.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
     myVar = tk.StringVar(window)
     myVar.set("Select")
 
     window.title("Intro")
-    window.geometry("800x500")
     title = window.title()
 
     welcomeLabel = tk.Label(window, text = "Culminating Time (n.)\n\n A stressful time where students forget to balance out studying and health\n\nAnd I'm no different. But I won't this time.", height = 100, width = 500)
