@@ -24,14 +24,18 @@ cook.place(x=460, y=430)
 
 def unhealthy():
     window.destroy()
-    g.p.health = g.p.health*1.25-25
-    g.p.satisfaction -= 5
+
+    g.p.health += 5
+    g.p.happiness -= 5
+
     import day1c2
 
 def healthy():
     window.destroy()
-    g.p.health = g.p.health*0.75+25
-    g.p.satisfaction -= 5
+
+    g.p.health += 5
+    g.p.happiness -= 5
+
     import day1c2
 
 window.mainloop()

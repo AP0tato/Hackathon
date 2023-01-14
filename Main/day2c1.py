@@ -1,4 +1,5 @@
 import tkinter as tk
+import Globals as g
 
 window = tk.Tk()
 
@@ -29,11 +30,19 @@ hobby.place(x=460, y=430)
 def phys():
     #points to physical health
     window.destroy()
+
+    g.p.health += 5
+    g.p.happiness -= 5
+
     import day2c2
 
 def hobby():
     #points to happiness
     window.destroy()
+
+    g.p.health += 5
+    g.p.happiness += 5
+
     import day2c2
 
 window.mainloop()

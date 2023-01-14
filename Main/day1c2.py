@@ -24,12 +24,20 @@ stayUp.place(x=460, y=430)
 
 def unhealthy():
     window.destroy()
+
+    g.p.health -= 5
     g.p.rest -= 5
+    g.p.happiness += 5
+
     import day2c1
 
 def healthy():
     window.destroy()
+
+    g.p.health += 5
     g.p.rest += 5
+    g.p.happiness -= 5
+
     import day2c1
 
 window.mainloop()
