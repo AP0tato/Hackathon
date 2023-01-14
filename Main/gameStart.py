@@ -18,6 +18,6 @@ contBtn.place(x=360, y=340)
 
 def show_window():
     window.destroy()
-    import day1-1
+    import day1c1
 
 window.mainloop()

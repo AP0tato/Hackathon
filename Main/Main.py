@@ -1,6 +1,7 @@
 from pynput import keyboard
 import tkinter as tk
 import os
+import gameStart
 import sys
 
 class Player:
@@ -29,7 +30,7 @@ def Main():
         on_release=on_release)
     listener.start()
 
-    os.system("python3 gameStart.py")
+    v = gameStart()
 
 if __name__=="__main__":
     Main()
