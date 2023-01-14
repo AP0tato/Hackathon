@@ -8,7 +8,16 @@ myVar.set("Select")
 
 
 window.title("Day 4")
-window.geometry("800x500")
+w = 800 
+h = 500 
+
+ws = window.winfo_screenwidth()
+hs = window.winfo_screenheight() 
+
+x = (ws/2) - (w/2)
+y = (hs/2) - (h/2)
+
+window.geometry('%dx%d+%d+%d' % (w, h, x, y))
 title = window.title()
 
 
