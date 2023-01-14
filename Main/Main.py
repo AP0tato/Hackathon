@@ -40,17 +40,34 @@ def Main():
     #blank setup, maybe a start screen?
     window = tk.Tk()
 
-    myVar = tk.StringVar(window)
-    myVar.set("Select")
+myVar = tk.StringVar(window)
+myVar.set("Select")
 
-    window.title("Testing")
-    window.geometry("800x500")
-    title = window.title()
 
-    welcomeLabel = tk.Label(window, text = "Welcome\nThis is the start! ", height = 5, width = 20)
-    welcomeLabel.pack()
+window.title("Game")
+window.geometry("800x500")
+title = window.title()
 
-    window.mainloop()
+play = tk.Label(window, text='Play Game', font='times 25')
+play.pack(fill='both',expand=True)
+
+playBtn = tk.Button(window,text='Play', command=lambda:show_window())
+playBtn.place(x=250, y=340)
+
+quitBtn = tk.Button(window,text='Quit', command=lambda:quit_window())
+quitBtn.place(x=550, y=340)
+
+def show_window():
+    window.destroy()
+    import gameStart.py
+
+def quit_window():
+    window.destroy()
+
+
+
+window.mainloop()
+
 
 if __name__=="__main__":
-    Main()
+    pass
