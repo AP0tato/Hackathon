@@ -3,10 +3,10 @@ import tkinter as tk
 def show_window(window):
         window.destroy()
         import day1c1
-        day1c1.run()
 
 def run():
     window = tk.Tk()
+    window.resizable(False, False)
     window.geometry('800x500')
 
     myVar = tk.StringVar(window)

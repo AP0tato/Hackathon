@@ -22,20 +22,16 @@ fast.place(x=260, y=430)
 cook = tk.Button(window,text=' Homecooked', command=lambda:healthy())
 cook.place(x=460, y=430)
 
-window.mainloop()
-
 def unhealthy():
     window.destroy()
-
     g.p.health = g.p.health*1.25-25
     g.p.satisfaction -= 5
-
     import day1c2
 
 def healthy():
     window.destroy()
-
     g.p.health = g.p.health*0.75+25
     g.p.satisfaction -= 5
-
     import day1c2
+
+window.mainloop()

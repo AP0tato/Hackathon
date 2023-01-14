@@ -22,8 +22,6 @@ sleep.place(x=260, y=430)
 stayUp = tk.Button(window,text='Stay Up', command=lambda:unhealthy())
 stayUp.place(x=460, y=430)
 
-window.mainloop()
-
 def unhealthy():
     window.destroy()
     g.p.rest -= 5
@@ -33,3 +31,5 @@ def healthy():
     window.destroy()
     g.p.rest += 5
     import day2c1
+
+window.mainloop()
