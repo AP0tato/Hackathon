@@ -1,23 +1,25 @@
 import tkinter as tk
-window = tk.Tk()
-window.geometry('800x500')
 
+def show_window(window):
+        window.destroy()
+        import day1c1
+        day1c1.run()
 
-myVar = tk.StringVar(window)
-myVar.set("Select")
+def run():
+    window = tk.Tk()
+    window.geometry('800x500')
 
-window.title("Intro")
-window.geometry("800x500")
-title = window.title()
+    myVar = tk.StringVar(window)
+    myVar.set("Select")
 
-welcomeLabel = tk.Label(window, text = "Culminating Time (n.)\n\n A stressful time where students forget to balance out studying and health\n\nAnd I'm no different. But I won't this time.", height = 100, width = 500)
-welcomeLabel.pack()
+    window.title("Intro")
+    window.geometry("800x500")
+    title = window.title()
 
-contBtn = tk.Button(window,text='Continue', command=lambda:show_window())
-contBtn.place(x=360, y=340)
+    welcomeLabel = tk.Label(window, text = "Culminating Time (n.)\n\n A stressful time where students forget to balance out studying and health\n\nAnd I'm no different. But I won't this time.", height = 100, width = 500)
+    welcomeLabel.pack()
 
-def show_window():
-    window.destroy()
-    import day1c1
+    contBtn = tk.Button(window,text='Continue', command=lambda:show_window(window))
+    contBtn.place(x=360, y=340)
 
-window.mainloop()
+    window.mainloop()
