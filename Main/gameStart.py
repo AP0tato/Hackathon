@@ -1,8 +1,3 @@
-import keyboard as key
-import tkinter as tk
-import _thread as th
-import sys
-
 import tkinter as tk
 window = tk.Tk()
 window.geometry('800x500')

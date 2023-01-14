@@ -1,6 +1,6 @@
 from pynput import keyboard
 import tkinter as tk
-import _thread as th
+import os
 import sys
 
 class Player:
@@ -37,20 +37,7 @@ def Main():
         on_release=on_release)
     listener.start()
 
-    #blank setup, maybe a start screen?
-    window = tk.Tk()
-
-    myVar = tk.StringVar(window)
-    myVar.set("Select")
-
-    window.title("Testing")
-    window.geometry("800x500")
-    title = window.title()
-
-    welcomeLabel = tk.Label(window, text = "Welcome\nThis is the start! ", height = 5, width = 20)
-    welcomeLabel.pack()
-
-    window.mainloop()
+    os.system("python3 gameStart.py")
 
 if __name__=="__main__":
     Main()
