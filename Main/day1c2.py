@@ -7,7 +7,16 @@ myVar = tk.StringVar(window)
 myVar.set("Select")
 
 window.title("Day 1.2")
-window.geometry("800x500")
+w = 800 
+h = 500 
+
+ws = window.winfo_screenwidth()
+hs = window.winfo_screenheight() 
+
+x = (ws/2) - (w/2)
+y = (hs/2) - (h/2)
+
+window.geometry('%dx%d+%d+%d' % (w, h, x, y))
 title = window.title()
 
 day  = tk.Label(window, text = "Day 1", font = "times 20", height = 0, width = 0)
