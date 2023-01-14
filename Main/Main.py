@@ -9,27 +9,32 @@ class Player:
     stress = 0  # Max 100
     health = 80 # Max 100, factors such as eating habits and physical activity
 
+p = Player()
+
 def CheckInput():
     while True:
         try:
             if(key.is_pressed('w')):
-                yVelocity = 1.0
+                p.yVelocity = 1.0
             elif(key.is_pressed('s')):
-                yVelocity = -1.0
+                p.yVelocity = -1.0
             elif(key.is_pressed('a')):
-                xVelocity = -1.0
+                p.xVelocity = -1.0
             elif(key.is_pressed('d')):
-                xVelocity = 1.0
+                p.xVelocity = 1.0
             elif(key.is_pressed('Esc')):
                 sys.exit(0)
             else:
-                xVelocity = 0.0
-                yVelocity = 0.0
+                p.xVelocity = 0.0
+                p.yVelocity = 0.0
         except:
             continue
 
 def Main():
-    pass
+    try:
+        th.start_new_thread( CheckInput )
+    except:
+        print("Error: Unable to start thread")
 
 #blank setup, maybe a start screen?
 window = tk.Tk()
