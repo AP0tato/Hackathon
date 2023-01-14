@@ -19,6 +19,9 @@ day.place(x=0,y=0)
 message = tk.Label(window, text = "It's a new day! I have quite some time before class. What should I do now that I'm ready?", font = "times 10", height=5, bg = "white")
 message.place(x=205,y=340)
 
+stat = tk.Label(window, text = "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.readiness), font = "times 10", height=5)
+stat.place(x=650,y=0)
+
 exercise = tk.Button(window,text='Exercise', command=lambda:phys())
 exercise.place(x=260, y=430)
 
