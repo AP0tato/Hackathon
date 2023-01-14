@@ -1,4 +1,4 @@
-import keyboard as key
+from pynput import keyboard
 import tkinter as tk
 import _thread as th
 import sys
@@ -11,30 +11,31 @@ class Player:
 
 p = Player()
 
-def CheckInput():
-    while True:
-        try:
-            if(key.is_pressed('w')):
-                p.yVelocity = 1.0
-            elif(key.is_pressed('s')):
-                p.yVelocity = -1.0
-            elif(key.is_pressed('a')):
-                p.xVelocity = -1.0
-            elif(key.is_pressed('d')):
-                p.xVelocity = 1.0
-            elif(key.is_pressed('Esc')):
-                sys.exit(0)
-            else:
-                p.xVelocity = 0.0
-                p.yVelocity = 0.0
-        except:
-            continue
+def on_press(key):
+    try:
+        if(key.char=='w'):
+            p.yVelocity = 1.0
+        elif(key.char=='s'):
+            p.yVelocity = -1.0
+        elif(key.char=='a'):
+            p.xVelocity = -1.0
+        elif(key.char=='d'):
+            p.xVelocity = 1.0
+    except AttributeError:
+        pass
+
+def on_release(key):
+    if key==keyboard.Key.esc:
+        sys.exit(0)
+    elif( key.char=='w' or key.char=='s' or key.char=='a' or key.char=='d' ):
+        p.xVelocity = 0.0
+        p.yVelocity = 0.0
 
 def Main():
-    try:
-        th.start_new_thread( CheckInput )
-    except:
-        print("Error: Unable to start thread")
+    listener = keyboard.Listener(
+        on_press=on_press,
+        on_release=on_release)
+    listener.start()
 
     #blank setup, maybe a start screen?
     window = tk.Tk()
