@@ -1,4 +1,6 @@
 import tkinter as tk
+import Globals as g
+
 
 window = tk.Tk()
 
@@ -29,11 +31,18 @@ friends.place(x=460, y=430)
 def study():
     #not sure which stats are affected rn
     window.destroy()
+
+    g.p.readiness += 5
+    
     import day3c1
 
 def hobby():
     #points to happiness
     window.destroy()
+
+    g.p.health += 5
+    g.p.happiness += 5
+
     import day3c1
 
 window.mainloop()
