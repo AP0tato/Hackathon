@@ -1,6 +1,7 @@
 import keyboard as key
 import tkinter as tk
 import _thread as th
+import sys
 
 class Player:
     xVelocity = 0.0
@@ -19,6 +20,8 @@ def CheckInput():
                 xVelocity = -1.0
             elif(key.is_pressed('d')):
                 xVelocity = 1.0
+            elif(key.is_pressed('Esc')):
+                sys.exit(0)
             else:
                 xVelocity = 0.0
                 yVelocity = 0.0
