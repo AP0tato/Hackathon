@@ -49,7 +49,7 @@ def review():
     g.p.readiness+=9
     g.p.stress+=6
     g.p.health -= 8
-    import day8c1
+    import day8
 
 def friends():
     window.destroy()
@@ -58,6 +58,6 @@ def friends():
     g.p.readiness-=7
     g.p.rest-=8
 
-    import day8c1
+    import day8
 
 window.mainloop()
