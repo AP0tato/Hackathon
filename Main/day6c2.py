@@ -50,13 +50,13 @@ def sleep():
     g.p.happiness+=7
     g.p.rest+=9
     g.p.readiness+=6
-    g.p.health+=7
+    g.p.health+=7 if g.p.health+5 < 100 else 0
     import day7
 
 def stay():
     window.destroy()
     g.p.rest-=7
-    g.p.happiness +=8
+    g.p.happiness +=8 if g.p.happiness+5 < 100 else 0
     g.p.stress-=4
     g.p.health-=7
     g.p.readiness-=6
@@ -67,9 +67,9 @@ def study():
     window.destroy()
     g.p.rest-=7
     g.p.happiness -=8
-    g.p.stress+=6
+    g.p.stress+=6 if g.p.health+5 < 100 else 0
     g.p.health-=7
-    g.p.readiness+=6
+    g.p.readiness+=6 if g.p.readiness+6 < 100 else 0
 
     import day7
 

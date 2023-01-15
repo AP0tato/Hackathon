@@ -44,7 +44,7 @@ def walk():
     #adds, but less
     window.destroy()
 
-    g.p.health += 2
+    g.p.health += 2 if g.p.health+2 < 100 else 0
     g.p.stress -= 1
     g.p.readiness -= 2
     
@@ -54,8 +54,8 @@ def gym():
     #adds, but more
     window.destroy()
 
-    g.p.health+= 4
-    g.p.stress += 1
+    g.p.health += 4 if g.p.health+4 < 100 else 0
+    g.p.stress += 1 if g.p.stress+1 < 100 else 0
     g.p.readiness -= 2
 
     import day4

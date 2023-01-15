@@ -44,7 +44,7 @@ def study():
     #not sure which stats are affected rn
     window.destroy()
 
-    g.p.readiness += 5
+    g.p.readiness += 5 if g.p.readiness+5 < 100 else 0
     g.p.stress -= 3
     
     import day3c1
@@ -53,8 +53,8 @@ def hobby():
     #points to happiness
     window.destroy()
 
-    g.p.health += 3
-    g.p.happiness += 5
+    g.p.health += 3 if g.p.health+3 < 100 else 0
+    g.p.happiness += 5 if g.p.happiness+5 < 100 else 0
     g.p.stress -= 2
     g.p.readiness -= 1
 

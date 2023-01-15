@@ -25,27 +25,8 @@ day.place(x=0,y=0)
 message = tk.Label(window, text = "It's pretty late now. I don't really feel tired but I also don't have much to do...", font = "times 10", height=5, bg = "white")
 message.place(x=245,y=340)
 
-stat = tk.Text(window, height=5, font="times 16", takefocus=0, bg='white')
-stat.insert('1.0', "Stress: "+str(g.p.stress) + "\nHealth: "+str(g.p.health) + "\nRest: "+str(g.p.rest) + "\nHappiness: "+str(g.p.happiness) + "\nReadiness: "+str(g.p.readiness))
-
-stat.tag_add("Stress", 1.8, 2.0)
-stat.tag_config("Stress", foreground='#3ade65' if g.p.stress<87 else '#de4040' if g.p.stress>=93 else '#f0ac37')
-
-stat.tag_add("Health", 2.8, 3.0)
-stat.tag_config("Health", foreground='#3ade65' if g.p.stress<=87 else '#de4040' if g.p.stress>=93 else '#f0ac37')
-
-stat.tag_add("Rest", 3.6, 3.8)
-stat.tag_config("Rest", foreground='#3ade65' if g.p.stress<=87 else '#de4040' if g.p.stress>=93 else '#f0ac37')
-
-stat.tag_add("Happiness", 4.11, 4.13)
-stat.tag_config("Happiness", foreground='#3ade65' if g.p.stress<=87 else '#de4040' if g.p.stress>=93 else '#f0ac37')
-
-stat.tag_add("Readiness", 5.11, 5.13)
-stat.tag_config("Readiness", foreground='#3ade65' if g.p.stress<=87 else '#de4040' if g.p.stress>=93 else '#f0ac37')
-
-stat.config(state="disabled")
-stat.pack()
-stat.place(x=690,y=0)
+stat = tk.Label(window, text = "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.readiness), font = "times 10", height=5)
+stat.place(x=650,y=0)
 
 sleep = tk.Button(window,text='Go to Sleep', command=lambda:healthy())
 sleep.place(x=260, y=430)
@@ -58,8 +39,8 @@ def unhealthy():
 
     g.p.health -= 4
     g.p.rest -= 5
-    g.p.happiness += 5
-    g.p.stress += 5
+    g.p.happiness += 5 if g.p.happiness+5 < 100 else 0
+    g.p.stress += 5 if g.p.stress+5 < 100 else 0
     g.p.readiness -= 2
 
     import day2c1
@@ -67,10 +48,10 @@ def unhealthy():
 def healthy():
     window.destroy()
 
-    g.p.health += 5
-    g.p.rest += 4
+    g.p.health += 5 if g.p.health+5 < 100 else 0
+    g.p.rest += 4 if g.p.rest+5 < 100 else 0
     g.p.happiness -= 5
-    g.p.stress += 2
+    g.p.stress += 2 if g.p.stress+5 < 100 else 0
     g.p.readiness -=2
 
     import day2c1

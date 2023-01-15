@@ -58,9 +58,9 @@ def study():
 def gym():
     window.destroy()
 
-    g.p.health += 6
+    g.p.health += 6 if g.p.health+6 < 100 else 0
     g.p.stress -=3
-    g.p.happiness +=5
+    g.p.happiness +=5 if g.p.happiness+5 < 100 else 0
     g.p.readiness -= 2
 
     import day5c2
@@ -68,8 +68,8 @@ def gym():
 def out():
     window.destroy()
 
-    g.p.health += 4
-    g.p.happiness += 6
+    g.p.health += 4 if g.p.health+4 < 100 else 0
+    g.p.happiness += 6 if g.p.happiness+5 < 100 else 0
     g.p.stress -= 4
     g.p.readiness -= 2
 

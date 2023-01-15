@@ -49,16 +49,16 @@ def review():
     window.destroy()
     g.p.happiness-=9
     g.p.rest-=8
-    g.p.readiness+=10
+    g.p.readiness+=10 if g.p.health+5 < 100 else 0
     g.p.stress-=8
     g.p.health-=7
     import day9c1
 
 def gym():
     window.destroy()
-    g.p.health+=7
-    g.p.happiness +=9
-    g.p.stress+=7
+    g.p.health+=7 if g.p.health+7 < 100 else 0
+    g.p.happiness +=9 if g.p.happiness+9 < 100 else 0
+    g.p.stress+=7 if g.p.stress+7 < 100 else 0
     g.p.readiness-=4
     g.p.rest-=7
 
@@ -66,11 +66,11 @@ def gym():
 
 def relax():
     window.destroy()
-    g.p.health+=6
-    g.p.happiness +=8
+    g.p.health+=6 if g.p.health+5 < 100 else 0
+    g.p.happiness +=8 if g.p.happiness+8 < 100 else 0
     g.p.stress-=7
     g.p.readiness-=5
-    g.p.rest+=8
+    g.p.rest+=8 if g.p.rest+8 < 100 else 0
 
     import day9c1
 

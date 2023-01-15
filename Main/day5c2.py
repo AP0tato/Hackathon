@@ -46,7 +46,7 @@ reject.place(x=380, y=430)
 def join():
     window.destroy()
 
-    g.p.happiness += 7
+    g.p.happiness += 7 if g.p.happiness+7 < 100 else 0
     g.p.rest -= 8
     g.p.readiness -= 8
 
@@ -55,7 +55,7 @@ def join():
 def dont():
     window.destroy()
 
-    g.p.rest += 7
+    g.p.rest += 7 if g.p.rest+7 < 100 else 0
     g.p.happiness -= 6
     g.p.stress -= 3
 

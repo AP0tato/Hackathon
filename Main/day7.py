@@ -46,15 +46,15 @@ def review():
     window.destroy()
     g.p.happiness-=9
     g.p.rest-=8
-    g.p.readiness+=9
-    g.p.stress+=6
+    g.p.readiness+=9 if g.p.readiness+9 < 100 else 0
+    g.p.stress+=6 if g.p.stress+6 < 100 else 0
     g.p.health -= 8
     import day8
 
 def friends():
     window.destroy()
-    g.p.happiness +=9
-    g.p.stress+=3
+    g.p.happiness +=9 if g.p.happiness+9 < 100 else 0
+    g.p.stress+=3 if g.p.stress+3 < 100 else 0
     g.p.readiness-=7
     g.p.rest-=8
 

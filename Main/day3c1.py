@@ -44,8 +44,8 @@ def eat():
     #physical health
     window.destroy()
 
-    g.p.health += 4
-    g.p.stress += 2
+    g.p.health += 4 if g.p.health+4 < 100 else 0
+    g.p.stress += 2 if g.p.stress+2 < 100 else 0
 
     import day3c2
 

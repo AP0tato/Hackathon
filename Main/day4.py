@@ -44,8 +44,8 @@ dontGo.place(x=460, y=430)
 def go():
     window.destroy()
 
-    g.p.readiness += 5
-    g.p.happiness += 4
+    g.p.readiness += 5 if g.p.readiness+5 < 100 else 0
+    g.p.happiness += 4 if g.p.happiness+5 < 100 else 0
     g.p.stress -= 2
 
     import day5c1
@@ -53,9 +53,9 @@ def go():
 def home():
     window.destroy()
 
-    g.p.rest += 4
-    g.p.stress += 7
-    g.p.health += 2
+    g.p.rest += 4 if g.p.rest+4 < 100 else 0
+    g.p.stress += 7 if g.p.stress+7 < 100 else 0
+    g.p.health += 2 if g.p.health+2 < 100 else 0
     g.p.readiness -= 5
     
     import day5c1

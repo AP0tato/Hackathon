@@ -43,7 +43,7 @@ def phys():
     #points to physical health
     window.destroy()
 
-    g.p.health += 5
+    g.p.health += 5 if g.p.health+5 < 100 else 0
     g.p.happiness -= 3
     g.p.stress -= 2
 
@@ -53,8 +53,8 @@ def hobby():
     #points to happiness
     window.destroy()
 
-    g.p.health += 3
-    g.p.happiness += 5
+    g.p.health += 3 if g.p.health+3 < 100 else 0
+    g.p.happiness += 5 if g.p.happiness+5 < 100 else 0
     g.p.stress -= 3
 
     import day2c2
