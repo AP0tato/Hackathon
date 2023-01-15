@@ -53,9 +53,10 @@ def hobby():
     #points to happiness
     window.destroy()
 
-    g.p.health += 5
+    g.p.health += 3
     g.p.happiness += 5
-    g.p.stress -= 1
+    g.p.stress -= 2
+    g.p.readiness -= 1
 
     import day3c1
 

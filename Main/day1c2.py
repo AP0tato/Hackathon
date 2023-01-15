@@ -37,10 +37,11 @@ stayUp.place(x=460, y=430)
 def unhealthy():
     window.destroy()
 
-    g.p.health -= 5
+    g.p.health -= 4
     g.p.rest -= 5
     g.p.happiness += 5
     g.p.stress += 5
+    g.p.readiness -= 2
 
     import day2c1
 
@@ -48,9 +49,10 @@ def healthy():
     window.destroy()
 
     g.p.health += 5
-    g.p.rest += 5
+    g.p.rest += 4
     g.p.happiness -= 5
-    g.p.stress += 5
+    g.p.stress += 2
+    g.p.readiness -=2
 
     import day2c1
 

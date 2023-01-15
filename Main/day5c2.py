@@ -45,16 +45,19 @@ reject.place(x=380, y=430)
 
 def join():
     window.destroy()
-    g.p.happiness+=7
-    g.p.rest-=8
-    g.p.readiness-=8
+
+    g.p.happiness += 7
+    g.p.rest -= 8
+    g.p.readiness -= 8
+
     import day6c1
 
 def dont():
     window.destroy()
-    g.p.rest+=7
-    g.p.happiness -=6
-    g.p.stress-=5
+
+    g.p.rest += 7
+    g.p.happiness -= 6
+    g.p.stress -= 3
 
     import day6c1
 

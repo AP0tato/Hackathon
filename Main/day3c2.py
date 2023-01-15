@@ -46,6 +46,7 @@ def walk():
 
     g.p.health += 2
     g.p.stress -= 1
+    g.p.readiness -= 2
     
     import day4
 
@@ -55,6 +56,7 @@ def gym():
 
     g.p.health+= 4
     g.p.stress += 1
+    g.p.readiness -= 2
 
     import day4
 

@@ -43,16 +43,20 @@ dontGo.place(x=460, y=430)
 
 def go():
     window.destroy()
+
     g.p.readiness += 5
-    g.p.happiness += 5
-    g.p.stress -=1
+    g.p.happiness += 4
+    g.p.stress -= 2
+
     import day5c1
 
 def home():
     window.destroy()
 
-    g.p.rest+= 4
+    g.p.rest += 4
     g.p.stress += 7
+    g.p.health += 2
+    g.p.readiness -= 5
     
     import day5c1
 

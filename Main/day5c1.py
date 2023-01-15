@@ -49,24 +49,29 @@ def study():
 
     g.p.readiness += 6
     g.p.rest -= 7
-    g.p.happiness -=7
-    g.p.health -=7
-    g.p.stress+=6
+    g.p.happiness -= 7
+    g.p.health -= 8
+    g.p.stress += 6
     
     import day6c1
 
 def gym():
     window.destroy()
-    g.p.health+= 6
-    g.p.stress-=3
-    g.p.happiness+=5
+
+    g.p.health += 6
+    g.p.stress -=3
+    g.p.happiness +=5
+    g.p.readiness -= 2
+
     import day5c2
 
 def out():
     window.destroy()
-    g.p.health+= 4
-    g.p.happiness +=6
-    g.p.stress-=4
+
+    g.p.health += 4
+    g.p.happiness += 6
+    g.p.stress -= 4
+    g.p.readiness -= 2
 
     import day5c2
 
