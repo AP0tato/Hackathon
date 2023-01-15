@@ -29,7 +29,7 @@ day.place(x=0,y=0)
 message = tk.Label(window, text = "I have an early class today, I'm not sure if there's time to eat!", font = "times 10", height=5, bg = "white")
 message.place(x=235,y=340)
 
-stat = tk.Label(window, text = "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.readiness), font = "times 10", height=5)
+stat = tk.Label(window, text = "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.happiness) + "\nReadiness"+str(g.p.readiness), font = "times 10", height=5)
 stat.place(x=650,y=0)
 
 eat = tk.Button(window,text='Eat Something', command=lambda:eat())

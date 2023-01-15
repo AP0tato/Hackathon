@@ -29,7 +29,7 @@ message = tk.Label(window, text = "My friends want to have study group at the li
 message.place(x=250,y=340)
 
 #this is where the attribute error occurs, but it shows on repl
-stat = tk.Label(window, text = "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.readiness), font = "times 10", height=5)
+stat = tk.Label(window, text = "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.happiness) + "\nReadiness"+str(g.p.readiness), font = "times 10", height=5)
 stat.place(x=650,y=0)
 
 

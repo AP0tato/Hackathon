@@ -31,7 +31,7 @@ day.place(x=0,y=0)
 message = tk.Label(window, text = "I slept in on my day off. There isn't a lot of time left in the day.\nMy old classmates asked me out to a small outing\nI think I deserve a break...", font = "times 10", height=5, bg = "white")
 message.place(x=250,y=340)
 
-stat = tk.Label(window, text = "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.readiness), font = "times 10", height=5)
+stat = tk.Label(window, text = "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.happiness) + "\nReadiness"+str(g.p.readiness), font = "times 10", height=5)
 stat.place(x=650,y=0)
 
 friends= tk.Button(window,text='Go With Classmates', command=lambda:friends())
