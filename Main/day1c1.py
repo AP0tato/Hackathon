@@ -25,7 +25,7 @@ day.place(x=0,y=0)
 message = tk.Label(window, text = "Today is the first day, I've decided to start small. Good in, good out!\nSo what should I eat?", font = "times 10", height=5, bg = "white")
 message.place(x=245,y=340)
 
-stat = tk.Text(window, height=5, font="times 16", takefocus=0)
+stat = tk.Text(window, height=5, font="times 16", takefocus=0, bg='white')
 stat.insert('1.0', "Stress: "+str(g.p.stress) + "\nHealth: "+str(g.p.health) + "\nRest: "+str(g.p.rest) + "\nHappiness: "+str(g.p.happiness) + "\nReadiness: "+str(g.p.readiness))
 
 stat.tag_add("Stress", 1.8, 2.0)
