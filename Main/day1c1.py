@@ -25,13 +25,14 @@ day.place(x=0,y=0)
 message = tk.Label(window, text = "Today is the first day, I've decided to start small. Good in, good out!\nSo what should I eat?", font = "times 10", height=5, bg = "white")
 message.place(x=245,y=340)
 
+stat = tk.Text(window, height=5, font="times 16", takefocus=0, bg="#323232")
+stat.insert('1.0', "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.readiness))
+stat.tag_add("Stress", 1.0, 1.9)
+stat.tag_config("Stress", foreground='#3ade65' if g.p.stress<=90 else '#de4040')
+stat.config(state="disabled")
+stat.pack()
 
-text = tk.Text(window, height=5, font="times 16")
-text.insert('1.0', "Stress:"+str(g.p.stress) + "\nHealth:"+str(g.p.health) + "\nRest:"+str(g.p.rest) + "\nHappiness:"+str(g.p.readiness))
-text.tag_add("Stress", 1.0, 1.9)
-text.tag_config("Stress", foreground='#3ade65' if g.p.stress<=90 else '#de4040')
-
-text.place(x=690,y=0)
+stat.place(x=690,y=0)
 
 
 fast = tk.Button(window,text='Fast Food', command=lambda:unhealthy())
